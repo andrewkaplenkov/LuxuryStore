@@ -1,0 +1,18 @@
+@mixin flex-bc {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@mixin flex-vertical {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin container {
+	max-width: $container-width;
+	padding: $container-padding;
+	margin: 0 auto;
+}

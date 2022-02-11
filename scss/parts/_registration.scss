@@ -1,0 +1,184 @@
+.registration-wrap {
+	@include flex-bc;
+	align-items: start;
+	padding: 65px 0 95px 0;
+	gap: 128px;
+}
+
+.reg-form {
+	@include flex-vertical;
+	align-items: start;
+
+	input {
+		outline: none;
+		border: $border #a4a4a4;
+	}
+
+	&__name {
+		@include flex-vertical;
+		align-items: start;
+
+		p {
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 19px;
+			color: #222222;
+			margin-bottom: 20px;
+		}
+
+		input {
+			font-weight: 300;
+			font-size: 13px;
+			line-height: 16px;
+			color: #b1b1b1;
+			padding: 13px 0 13px 17px;
+			width: 360px;
+			margin-bottom: 25px;
+		}
+	}
+
+	&__sex {
+		@include flex-bc;
+		justify-content: start;
+		margin-bottom: 30px;
+
+		label {
+			font-weight: 300;
+			font-size: 11px;
+			line-height: 13px;
+			color: #000000;
+			margin-left: 10px;
+
+			&:first-of-type {
+				margin-right: 20px;
+			}
+		}
+	}
+
+	&__login {
+		@include flex-vertical;
+		align-items: start;
+
+		p {
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 19px;
+			color: #222222;
+			margin-bottom: 20px;
+		}
+
+		input {
+			font-weight: 300;
+			font-size: 13px;
+			line-height: 16px;
+			color: #b1b1b1;
+			padding: 13px 0 13px 17px;
+			width: 360px;
+			margin-bottom: 25px;
+		}
+
+		label {
+			font-weight: 300;
+			font-size: 13px;
+			line-height: 16px;
+			color: #b1b1b1;
+			width: 360px;
+		}
+	}
+
+	&__button {
+		font-size: 14px;
+		line-height: 17px;
+		color: #fff;
+		fill: #fff;
+		background-color: $accent-color;
+		padding: 16px 29px;
+		outline: $border transparent;
+		text-transform: uppercase;
+		margin-top: 35px;
+		transition: $transition color, $transition fill, $transition background-color, $transition outline-color;
+
+		svg {
+			margin-left: 20px;
+		}
+
+		&:hover {
+			background-color: #fff;
+			color: $accent-color;
+			fill: $accent-color;
+			outline-color: $accent-color;
+		}
+	}
+}
+
+.reg-perks {
+	@include flex-vertical;
+	align-items: start;
+
+	&__title {
+		font-weight: 300;
+		font-size: 24px;
+		line-height: 29px;
+		margin-bottom: 22px;
+		text-transform: uppercase;
+	}
+
+	&__text {
+		font-weight: 300;
+		font-size: 24px;
+		line-height: 29px;
+		margin-bottom: 22px;
+	}
+
+	&__list {
+		padding-left: 23px;
+	}
+
+	&__list-item {
+		font-weight: 300;
+		font-size: 24px;
+		line-height: 29px;
+		margin-bottom: 16px;
+		padding-left: 23px;
+
+		&::marker {
+			content: url(../img/homepage/galka.png);
+		}
+	}
+}
+
+//MEDIA
+
+@media (max-width: 1179px) {
+	.registration-wrap {
+		padding: 40px 20px 70px 20px;
+		gap: 22px;
+	}
+
+	.reg-perks {
+		&__title {
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 19px;
+		}
+
+		&__text {
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 19px;
+		}
+
+		&__list-item {
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 19px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.registration-wrap {
+		@include flex-vertical;
+		gap: 40px;
+	}
+}

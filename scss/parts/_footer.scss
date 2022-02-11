@@ -1,0 +1,54 @@
+.footer {
+	background-color: #222;
+	padding: 24px 0;
+	color: $lighter;
+	font-size: 16px;
+	line-height: 19px;
+
+	svg {
+		fill: #000;
+		transition: $transition fill;
+	}
+
+	a {
+		@include flex-bc;
+		justify-content: center;
+		width: 32px;
+		height: 32px;
+		background-color: #fff;
+		transition: $transition background-color;
+
+		&:hover {
+			background-color: $accent-color;
+		}
+
+		&:hover svg {
+			fill: #fff;
+		}
+	}
+}
+
+.footer-wrap {
+	@include flex-bc;
+}
+
+.social-box {
+	@include flex-bc;
+	gap: 8px;
+}
+
+//MEDIA
+
+@media (max-width: 1179px) {
+	.footer {
+		padding: 24px 20px;
+	}
+}
+
+@media (max-width: 767px) {
+	.footer-wrap {
+		@include flex-vertical;
+		flex-direction: column-reverse;
+		gap: 20px;
+	}
+}

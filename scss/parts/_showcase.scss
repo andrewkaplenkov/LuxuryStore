@@ -1,0 +1,141 @@
+.showcase {
+	text-align: center;
+	padding-bottom: 95px;
+
+	&__title {
+		font-size: 30px;
+		line-height: 36px;
+		color: $darker;
+	}
+
+	&__text {
+		font-size: 14px;
+		line-height: 17px;
+		color: $text-color;
+		margin: 6px 0 48px 0;
+	}
+
+	&__link {
+		display: inline-block;
+		color: $accent-color;
+		padding: 15px 40px;
+		background-color: #fff;
+		margin-top: 48px;
+		outline: $border $accent-color;
+		transition: $transition color, $transition background-color, $transition outline-color;
+
+		&:hover {
+			color: #fff;
+			background-color: $accent-color;
+			outline-color: transparent;
+		}
+	}
+}
+
+.showcase-wrap {
+	@include flex-bc;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+
+.showcase-box {
+	width: 360px;
+	height: 580px;
+	@include flex-vertical;
+	background-color: #f8f8f8;
+	position: relative;
+
+	&__filter {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 360px;
+		height: 420px;
+		@include flex-vertical;
+		background-color: rgba(58, 56, 56, 0.86);
+		opacity: 0;
+		transition: $transition opacity;
+	}
+
+	&__image {
+		height: 420px;
+		width: 360px;
+	}
+
+	&__button {
+		display: flex;
+		align-items: center;
+		gap: 11px;
+		font-size: 14px;
+		line-height: 17px;
+		color: #fff;
+		fill: #fff;
+		padding: 11px 16px;
+		outline: $border #fff;
+		transform: scale(0);
+		transition: $transition transform, $transition color, $transition fill, $transition background-color,
+			$transition outline-color;
+
+		&:hover {
+			color: $accent-color;
+			fill: $accent-color;
+			outline-color: transparent;
+			background-color: darken(#fff, 10%);
+		}
+	}
+
+	&:hover &__filter {
+		opacity: 1;
+	}
+	&:hover &__button {
+		transform: scale(1);
+	}
+}
+
+.showcase-textblock {
+	@include flex-vertical;
+	justify-content: space-between;
+	align-items: flex-start;
+	text-align: left;
+	padding: 25px 28px 20px 16px;
+	height: 160px;
+
+	&__link {
+		font-size: 13px;
+		line-height: 16px;
+		transition: $transition color;
+
+		&:hover {
+			color: $accent-color;
+		}
+	}
+
+	&__description {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 17px;
+		color: $text-color;
+		margin: 12px 0 18px 0;
+	}
+
+	&__price {
+		font-size: 16px;
+		line-height: 19px;
+		color: $accent-color;
+	}
+}
+
+//MEDIA
+
+@media (max-width: 1179px) {
+	.showcase {
+		padding-right: 15px;
+		padding-left: 15px;
+		padding-bottom: 60px;
+	}
+
+	.showcase-wrap {
+		justify-content: center;
+		gap: 15px;
+	}
+}

@@ -1,0 +1,73 @@
+.banner {
+	background-color: #f1e4e6;
+
+	&__title {
+		font-size: 48px;
+		line-height: 58px;
+		font-weight: 900;
+		color: $darker;
+		text-transform: uppercase;
+		border-left: 12px solid $accent-color;
+		padding-left: 16px;
+		margin-right: 100px;
+
+		span {
+			font-size: 32px;
+			line-height: 38px;
+			font-weight: 700;
+
+			span {
+				color: $accent-color;
+			}
+		}
+	}
+}
+
+.banner-wrap {
+	background-image: url(../img/homepage/banner-bg.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: -100px center;
+	padding: 240px 0 330px 0;
+	@include flex-bc;
+	justify-content: end;
+}
+
+//MEDIA
+
+@media (max-width: 1023px) {
+	.banner__title {
+		font-size: 44px;
+		line-height: 52px;
+		margin-right: 80px;
+
+		span {
+			font-size: 24px;
+			line-height: 28px;
+		}
+	}
+
+	.banner-wrap {
+		padding: 140px 0 170px 0;
+		background-position: -50px center;
+	}
+}
+
+@media (max-width: 767px) {
+	.banner__title {
+		font-size: 38px;
+		line-height: 30px;
+		margin-right: 0;
+
+		span {
+			font-size: 20px;
+			line-height: 24px;
+		}
+	}
+
+	.banner-wrap {
+		background: none;
+		padding: 140px 20px;
+		@include flex-vertical;
+	}
+}

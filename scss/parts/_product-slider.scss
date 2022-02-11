@@ -1,0 +1,26 @@
+.product-slider {
+	background-color: #f7f7f7;
+	@include flex-bc;
+	padding-bottom: 70px;
+
+	&__button {
+		@include flex-vertical;
+		width: 47px;
+		height: 47px;
+		background-color: rgba(42, 42, 42, 0.15);
+		fill: #000;
+		transition: $transition fill;
+
+		&:hover {
+			fill: $accent-color;
+		}
+	}
+}
+
+//MEDIA
+
+@media (max-width: 767px) {
+	.product-slider > img {
+		max-width: 330px;
+	}
+}

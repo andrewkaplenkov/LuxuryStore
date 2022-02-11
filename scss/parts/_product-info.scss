@@ -1,0 +1,160 @@
+.product-info {
+	outline: $border #eaeaea;
+	padding: 65px 250px;
+	margin-top: -70px;
+	background-color: #fff;
+	text-align: center;
+	margin-bottom: 120px;
+
+	&__collection {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 17px;
+		color: $accent-color;
+		text-transform: uppercase;
+	}
+
+	&__name {
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 22px;
+		color: #4d4d4d;
+		text-transform: uppercase;
+		margin-bottom: 48px;
+	}
+
+	&__description {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 17px;
+		color: $text-color;
+		max-width: 555px;
+		margin: 0 auto;
+		margin-bottom: 32px;
+	}
+
+	&__price {
+		font-weight: 300;
+		font-size: 24px;
+		line-height: 29px;
+		color: $accent-color;
+	}
+
+	&__n1 {
+		width: 63px;
+		height: 3px;
+		background-color: $accent-color;
+		border: none;
+		margin: 12px auto;
+	}
+
+	&__n2 {
+		width: 640px;
+		height: 1px;
+		background-color: #eaeaea;
+		border: none;
+		margin: 65px auto;
+	}
+
+	&__sort {
+		@include flex-bc;
+		justify-content: center;
+		text-transform: uppercase;
+		font-size: 14px;
+		line-height: 17px;
+		color: #6f6e6e;
+		gap: 23px;
+		margin-bottom: 48px;
+
+		details {
+			position: relative;
+
+			summary {
+				transition: $transition color;
+
+				&:hover {
+					color: $accent-color;
+
+					svg {
+						fill: $accent-color;
+					}
+				}
+
+				svg {
+					fill: #6f6e6e;
+					margin-left: 10px;
+					vertical-align: middle;
+					transition: $transition fill;
+				}
+			}
+
+			.sublist {
+				position: absolute;
+				background-color: #fff;
+				z-index: 1;
+				top: 20px;
+				box-shadow: $shadow;
+				text-align: left;
+				padding: 7px 15px 11px 9px;
+				text-transform: none;
+
+				&__item {
+					margin-bottom: 6px;
+				}
+			}
+		}
+
+		details[open] summary {
+			color: $accent-color;
+
+			svg {
+				fill: $accent-color;
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	&__button {
+		font-size: 16px;
+		line-height: 19px;
+		color: $accent-color;
+		fill: $accent-color;
+		outline: $border $accent-color;
+		padding: 15px 35px;
+		transition: $transition color, $transition fill, $transition background-color, $transition outline-color;
+
+		svg {
+			vertical-align: middle;
+			margin-right: 16px;
+		}
+
+		&:hover {
+			color: #fff;
+			fill: #fff;
+			background-color: $accent-color;
+			outline-color: transparent;
+		}
+	}
+}
+
+//MEDIA
+
+@media (max-width: 1179px) {
+	.product-info {
+		padding: 60px 100px;
+
+		&__n2 {
+			width: 540px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.product-info {
+		padding: 40px 20px;
+
+		&__n2 {
+			width: 95%;
+		}
+	}
+}

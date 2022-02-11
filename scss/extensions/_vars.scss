@@ -1,0 +1,14 @@
+$accent-color: #f16d7f;
+
+$text-color: #5d5d5d;
+$darker: darken($text-color, 18%);
+$lighter: lighten($text-color, 60%);
+
+$shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+
+$container-width: 1140px;
+$container-padding: 0 20px;
+
+$border: 1px solid;
+
+$transition: 0.3s ease;

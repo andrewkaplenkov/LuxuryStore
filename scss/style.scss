@@ -1,0 +1,31 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic);
+
+@import "extensions/reset";
+@import "extensions/vars";
+@import "extensions/mixins";
+
+body {
+	font-family: "Lato", sans-serif;
+}
+
+.container {
+	@include container;
+	padding: 0;
+}
+
+@import "parts/header";
+@import "parts/main-navbar";
+@import "parts/advantages";
+@import "parts/feedback";
+@import "parts/footer";
+@import "parts/sideblock";
+
+@import "parts/banner";
+@import "parts/categories";
+@import "parts/showcase";
+@import "parts/showcase-topbar";
+@import "parts/pagination";
+@import "parts/product-slider";
+@import "parts/product-info";
+@import "parts/cart";
+@import "parts/registration";
