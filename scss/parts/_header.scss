@@ -10,6 +10,10 @@
 		&:hover {
 			fill: $accent-color;
 		}
+
+		&:focus {
+			outline: none;
+		}
 	}
 
 	details[open] > summary > svg {

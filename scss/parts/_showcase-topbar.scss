@@ -14,6 +14,10 @@
 	position: relative;
 }
 
+summary:focus {
+	outline: none;
+}
+
 #filter {
 	font-weight: 600;
 	font-size: 14px;

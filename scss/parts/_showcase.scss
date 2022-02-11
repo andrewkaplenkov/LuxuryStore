@@ -138,4 +138,9 @@
 		justify-content: center;
 		gap: 15px;
 	}
+
+	.showcase-box__filter,
+	.showcase-box__button {
+		display: none;
+	}
 }
